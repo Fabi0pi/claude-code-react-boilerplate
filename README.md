@@ -88,4 +88,6 @@ After creating the remote repo:
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Permissive: you can use, copy, modify, and distribute this boilerplate, including in commercial projects, with no obligation to open-source your own code — just keep the copyright notice.
+
+If you only copy `.claude/` + `CLAUDE.md`/`AGENTS.md` into your own project (rather than forking the whole repo), keep the `LICENSE` file alongside them to stay compliant with MIT's notice requirement.
