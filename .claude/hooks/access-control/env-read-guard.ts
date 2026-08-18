@@ -27,8 +27,8 @@ async function main() {
 
   if (blocked) {
     console.error(
-      "Accesso a file .env bloccato dall'hook env-read-guard. " +
-        "Se serve davvero, chiedi all'utente di rimuovere il blocco."
+      "Access to .env files blocked by the env-read-guard hook. " +
+        "If you really need it, ask the user to remove the block."
     );
     process.exit(2);
   }
