@@ -6,22 +6,22 @@ description: Use when creating a new React component or refactoring an existing 
 # Components Architecture
 
 ## Single responsibility
-- Un componente = una concern
-- Splitta qualunque componente che superi ~500 righe o gestisca più responsabilità
-- Estrai logica in hook dedicati (`useXxx`) per tenere il JSX pulito
-- Mai callback inline più lunghi di 4 righe — estrai funzioni nominate
+- One component = one concern
+- Split any component that exceeds ~500 lines or handles more than one responsibility
+- Extract logic into dedicated hooks (`useXxx`) to keep the JSX clean
+- Never inline callbacks longer than 4 lines — extract named functions
 
 ## Composition first
-- Costruisci prima i primitives (Button, Input, Badge…) poi componili
-- Prima di creare un nuovo componente, controlla se **shadcn/ui** già lo fornisce
-  (consulta https://ui.shadcn.com/docs/components)
-- Progetta ogni componente per essere **configurabile via props**, non duplicato
+- Build primitives first (Button, Input, Badge…) then compose them
+- Before creating a new component, check if **shadcn/ui** already provides it
+  (see https://ui.shadcn.com/docs/components)
+- Design every component to be **configurable via props**, not duplicated
 
-## Dove vivono i componenti
+## Where components live
 
-| Tipo | Path |
+| Type | Path |
 |---|---|
-| Generici riusabili | `src/components/ui/` |
-| Layout app-wide | `src/components/layout/` |
-| Specifici di feature | `src/features/<feature>/components/` |
-| Specifici di pagina | `src/pages/<page>/components/` |
+| Generic, reusable | `src/components/ui/` |
+| App-wide layout | `src/components/layout/` |
+| Feature-specific | `src/features/<feature>/components/` |
+| Page-specific | `src/pages/<page>/components/` |

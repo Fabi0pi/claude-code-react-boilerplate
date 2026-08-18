@@ -5,52 +5,52 @@ description: Use when adding or reviewing global client state. Covers when to re
 
 # State Management (Zustand)
 
-## Quando usare cosa
+## What to use when
 
-| Tipo di stato | Strumento |
+| State type | Tool |
 |---|---|
 | Server state (fetch/mutation) | TanStack Query |
-| Stato locale di un componente | `useState` |
-| Stato globale client-side | Zustand |
-| Stato URL (filters, tabs) | React Router params |
+| Local component state | `useState` |
+| Global client-side state | Zustand |
+| URL state (filters, tabs) | React Router params |
 
-**Default:** prima `useState`, poi sollevare lo stato, poi Zustand. Mai partire da global.
+**Default:** start with `useState`, then lift state up, then Zustand. Never start from global.
 
 ## Store design
 
-- Uno store per dominio/feature (no monolitici)
-- Tieni gli store piccoli e focalizzati
-- Non mischiare UI state e business state nello stesso store
+- One store per domain/feature (no monoliths)
+- Keep stores small and focused
+- Don't mix UI state and business state in the same store
 
-## Posizione
+## Location
 
-- `src/features/<feature>/store/` per stato specifico di feature
-- `src/app/store/` solo se davvero globale (es. theme, auth user)
+- `src/features/<feature>/store/` for feature-specific state
+- `src/app/store/` only if truly global (e.g. theme, auth user)
 
-## Regole stato
+## State rules
 
-- Memorizza solo lo stretto necessario
-- Evita derived state nello store (calcolalo fuori quando possibile)
-- Mantieni lo stato flat, non profondamente annidato
+- Store only what's strictly necessary
+- Avoid derived state in the store (compute it outside when possible)
+- Keep state flat, not deeply nested
 
 ## Actions
 
-- Le actions vivono dentro lo store
-- Devono essere semplici e prevedibili
-- Niente logica complessa nei componenti
+- Actions live inside the store
+- They must be simple and predictable
+- No complex logic in components
 
 ## Selectors
 
-- Seleziona sempre solo quello che serve
-- Non subscrivere all'intero store
-- Non passare l'intero store ai componenti
+- Always select only what's needed
+- Don't subscribe to the entire store
+- Don't pass the whole store down to components
 
-## Esempi tipici
+## Typical examples
 
 - `useUserStore` → user data (client-side)
-- `useUIStore` → flag UI (modali, sidebar, theme)
-- `useCartStore` → carrello
+- `useUIStore` → UI flags (modals, sidebar, theme)
+- `useCartStore` → cart
 
 ## Async
 
-- Per server state: **sempre** TanStack Query, mai Zustand
+- For server state: **always** TanStack Query, never Zustand
