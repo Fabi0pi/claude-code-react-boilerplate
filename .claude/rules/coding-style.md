@@ -1,9 +1,9 @@
 # Coding Style
 
-- Codice leggibile > codice "smart"
-- Funzioni piccole e pure
-- Nomi espliciti
-- Evita magic numbers (estrai costanti)
-- Usa early return per ridurre nesting
-- Prefer named exports (eccetto config tooling)
-- Programmazione funzionale e dichiarativa quando possibile
+- Readable code > "smart" code
+- Small, pure functions
+- Explicit names
+- Avoid magic numbers (extract constants)
+- Use early returns to reduce nesting
+- Prefer named exports (except tooling config)
+- Functional and declarative programming when possible

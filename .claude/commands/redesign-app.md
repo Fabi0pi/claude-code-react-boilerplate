@@ -1,57 +1,59 @@
 ---
-description: Genera un brief di redesign per un'app a partire da un template guidato
+description: Generate an app redesign brief from a guided template
 ---
 
-Usa il seguente template per produrre un brief di redesign completo dell'app
-descritta dall'utente. Compila ogni sezione **basandoti su quanto già discusso
-in conversazione** e su quanto puoi ispezionare nel progetto corrente. Dove
-mancano informazioni, fai 2-3 domande mirate prima di procedere — non inventare.
+Use the following template to produce a complete redesign brief for the app
+described by the user. Fill in each section **based on what has already been
+discussed** in the conversation and what you can inspect in the current
+project. Where information is missing, ask 2-3 targeted questions before
+proceeding — don't make things up.
 
-L'output finale deve essere markdown pulito, in italiano, pronto da consegnare
-a un designer. Stile target: **Notion / Stripe / Airbnb** — minimal, moderno,
-focalizzato su chiarezza e velocità d'uso.
+The final output must be clean markdown, written in the language configured
+in `CLAUDE.md` (default: English unless the user says otherwise), ready to
+hand off to a designer. Target style: **Notion / Stripe / Airbnb** — minimal,
+modern, focused on clarity and speed of use.
 
 ---
 
 ## Template
 
-**Nome app:** [inserisci]
+**App name:** [insert]
 
-**Obiettivo dell'app:**
-Questa applicazione serve a [funzione principale] e aiuta l'utente a
-[problema specifico risolto]. In pratica, permette di [azione principale]
-in modo più rapido, organizzato e chiaro rispetto a strumenti generici.
+**App goal:**
+This application serves to [main function] and helps the user
+[specific problem solved]. In practice, it lets users [main action]
+faster, more organized, and clearer than generic tools.
 
-**Problema risolto:** [pain point principale]
+**Problem solved:** [main pain point]
 
-**Utenti target:**
-- [Profilo 1] che vuole [obiettivo]
-- [Profilo 2] che ha bisogno di [esigenza]
-- [Profilo 3] che usa l'app per [risultato]
+**Target users:**
+- [Profile 1] who wants [goal]
+- [Profile 2] who needs [need]
+- [Profile 3] who uses the app for [outcome]
 
-**Casi d'uso principali:**
-1. Onboarding — primo utilizzo
-2. Gestione attività core
-3. Consultazione/modifica dati esistenti
-4. Monitoraggio stato/risultati
-5. Uso ricorrente nel tempo
+**Main use cases:**
+1. Onboarding — first use
+2. Core activity management
+3. Viewing/editing existing data
+4. Monitoring status/results
+5. Recurring use over time
 
-**Funzionalità principali:** (5 max, una riga ciascuna)
+**Main features:** (5 max, one line each)
 
-**Struttura attuale:** dashboard / area operativa / dettaglio / creazione-modifica / settings
+**Current structure:** dashboard / operational area / detail / create-edit / settings
 
-**User flow chiave:** lineare, pochi step, microcopy chiaro, feedback su ogni azione.
+**Key user flow:** linear, few steps, clear microcopy, feedback on every action.
 
-**Problemi UX attuali:** (gerarchia visiva debole, troppe info per schermata, navigazione poco prevedibile, flussi con step inutili, linguaggio troppo tecnico, feedback di sistema poco chiari…)
+**Current UX problems:** (weak visual hierarchy, too much info per screen, unpredictable navigation, unnecessary flow steps, overly technical language, unclear system feedback…)
 
-**Vincoli tecnici:** struttura esistente, funzionalità da preservare, performance, compatibilità componenti.
+**Technical constraints:** existing structure, features to preserve, performance, component compatibility.
 
-**Linee guida redesign:**
-- Semplice, moderno, intuitivo
-- Gerarchia visiva forte
-- Pattern coerenti tra schermate
-- Stati sempre chiari (loading/empty/error/success)
+**Redesign guidelines:**
+- Simple, modern, intuitive
+- Strong visual hierarchy
+- Consistent patterns across screens
+- Always-clear states (loading/empty/error/success)
 
-**Stile desiderato:** minimal, moderno, ispirato a Notion / Stripe / Airbnb — chiarezza, affidabilità, qualità.
+**Desired style:** minimal, modern, inspired by Notion / Stripe / Airbnb — clarity, reliability, quality.
 
-**Importante per il designer:** ogni schermata deve far capire all'utente *dove si trova*, *cosa può fare*, *qual è il prossimo passo*, *cosa è successo dopo un'azione*.
+**Important for the designer:** every screen must make it clear to the user *where they are*, *what they can do*, *what the next step is*, *what happened after an action*.

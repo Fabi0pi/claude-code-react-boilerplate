@@ -1,46 +1,46 @@
 ---
-description: Carica in memoria un piano di lavoro salvato in .claude/plans/ del progetto corrente
+description: Load a work plan saved in the current project's .claude/plans/ into memory
 ---
 
 # Remember Plan
 
-Carica in memoria il piano di lavoro salvato in `.claude/plans/` del progetto corrente.
+Load the work plan saved in the current project's `.claude/plans/` into memory.
 
-## Istruzioni
+## Instructions
 
-1. Trova la root del progetto:
+1. Find the project root:
    ```bash
    git rev-parse --show-toplevel
    ```
 
-2. Elenca i file presenti in `<project-root>/.claude/plans/`:
+2. List the files in `<project-root>/.claude/plans/`:
    ```bash
    ls <project-root>/.claude/plans/
    ```
 
-3. Se non esistono piani:
-   - Comunica all'utente che non ci sono piani salvati in questo progetto.
-   - Suggerisci di usare `/save-plan` per salvarne uno.
-   - Fermati qui.
+3. If no plans exist:
+   - Tell the user there are no saved plans in this project.
+   - Suggest using `/save-plan` to save one.
+   - Stop here.
 
-4. Se esiste **un solo file**: caricalo direttamente.
+4. If **only one file** exists: load it directly.
 
-5. Se esistono **più file**: mostra l'elenco con data e nome, e chiedi all'utente
-   quale vuole caricare.
+5. If **multiple files** exist: show the list with date and name, and ask the
+   user which one to load.
 
-6. Leggi il contenuto del file scelto e confermalo all'utente con un riepilogo
-   in questo formato:
+6. Read the content of the chosen file and confirm it to the user with a
+   summary in this format:
 
    ```
-   Piano caricato: <nome-file>.md
-   Data: <dal frontmatter>
-   Status: <dal frontmatter>
+   Plan loaded: <file-name>.md
+   Date: <from frontmatter>
+   Status: <from frontmatter>
 
-   ## Riepilogo
-   <2-4 righe che sintetizzano obiettivo e prossimi step>
+   ## Summary
+   <2-4 lines summarizing the goal and next steps>
 
-   Pronto a procedere. Vuoi che inizi dallo Step 1 o hai aggiornamenti al piano?
+   Ready to proceed. Should I start from Step 1, or do you have updates to the plan?
    ```
 
-7. Tieni il contenuto del piano attivo nel contesto per tutta la sessione,
-   senza doverlo rileggere ad ogni messaggio.
+7. Keep the active plan's content in context for the rest of the session,
+   without needing to re-read it on every message.

@@ -1,37 +1,37 @@
 # Theming (Tailwind + shadcn/ui)
 
 Stack: **Tailwind CSS** + **shadcn/ui** (CSS variables based theming).
-Non usare Chakra UI o altre librerie di styling in parallelo.
+Do not use Chakra UI or other styling libraries in parallel.
 
 ## Color tokens
 
-Usa sempre le variabili CSS semantiche definite in `globals.css`,
-mai colori raw del palette Tailwind per valori semantici.
+Always use the semantic CSS variables defined in `globals.css`,
+never raw Tailwind palette colors for semantic values.
 
-| Uso | Token semantico | Evita |
+| Use | Semantic token | Avoid |
 |---|---|---|
-| Sfondo pagina | `bg-background` | `bg-white`, `bg-gray-50` |
-| Sfondo card/surface | `bg-card`, `bg-popover` | `bg-white`, `bg-slate-100` |
-| Testo primario | `text-foreground` | `text-black`, `text-gray-900` |
-| Testo secondario | `text-muted-foreground` | `text-gray-500` |
-| Bordi | `border-border` | `border-gray-200` |
-| Azione primaria | `bg-primary text-primary-foreground` | `bg-blue-600` |
-| Stato distruttivo | `bg-destructive text-destructive-foreground` | `bg-red-600` |
+| Page background | `bg-background` | `bg-white`, `bg-gray-50` |
+| Card/surface background | `bg-card`, `bg-popover` | `bg-white`, `bg-slate-100` |
+| Primary text | `text-foreground` | `text-black`, `text-gray-900` |
+| Secondary text | `text-muted-foreground` | `text-gray-500` |
+| Borders | `border-border` | `border-gray-200` |
+| Primary action | `bg-primary text-primary-foreground` | `bg-blue-600` |
+| Destructive state | `bg-destructive text-destructive-foreground` | `bg-red-600` |
 | Focus ring | `ring-ring` | `ring-blue-500` |
 
-Colori raw (`bg-blue-500`, `text-red-600`) ammessi **solo** per
-elementi puramente decorativi (es. badge categorici, grafici).
+Raw colors (`bg-blue-500`, `text-red-600`) are allowed **only** for
+purely decorative elements (e.g. categorical badges, charts).
 
 ## Dark mode
 
-- Dark mode è gestito automaticamente dalle CSS variables
-- Non scrivere mai `dark:` per valori semantici già coperti dai token
-- Usa `dark:` solo per casi edge (es. invertire un'immagine)
+- Dark mode is handled automatically by the CSS variables
+- Never write `dark:` for semantic values already covered by tokens
+- Use `dark:` only for edge cases (e.g. inverting an image)
 
 ## Validation checklist
 
-Prima di considerare un componente fatto, verifica mentalmente:
-- Si vede correttamente in light mode?
-- Si vede correttamente in dark mode?
-- Tutti i colori usati sono token semantici (non raw)?
-- Spacing usa la 8px grid (gap-2, p-4, ecc.)?
+Before considering a component done, check mentally:
+- Does it look correct in light mode?
+- Does it look correct in dark mode?
+- Are all colors used semantic tokens (not raw)?
+- Does spacing follow the 8px grid (gap-2, p-4, etc.)?

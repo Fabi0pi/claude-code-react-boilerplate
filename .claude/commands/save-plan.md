@@ -1,45 +1,45 @@
 ---
-description: Salva il piano di lavoro corrente in .claude/plans/ del progetto attivo
+description: Save the current work plan to .claude/plans/ in the active project
 ---
 
 # Save Plan
 
-Salva il piano di lavoro corrente nella cartella `.claude/plans/` della root del progetto attivo.
+Save the current work plan to the `.claude/plans/` folder in the active project's root.
 
-## Istruzioni
+## Instructions
 
-1. Trova la root del progetto eseguendo:
+1. Find the project root by running:
    ```bash
    git rev-parse --show-toplevel
    ```
-   Se il comando fallisce (non siamo in un repo git), usa `$PWD` come fallback.
+   If the command fails (not in a git repo), fall back to `$PWD`.
 
-2. Crea la directory se non esiste:
+2. Create the directory if it doesn't exist:
    ```bash
    mkdir -p <project-root>/.claude/plans
    ```
 
-3. Genera un nome file descrittivo in kebab-case basato sul contenuto del piano
-   (es. `zod-validation-forms.md`, `auth-refactor.md`, `api-pagination.md`).
-   Se l'utente ha già fornito un nome, usalo.
+3. Generate a descriptive kebab-case filename based on the plan's content
+   (e.g. `zod-validation-forms.md`, `auth-refactor.md`, `api-pagination.md`).
+   If the user already provided a name, use it.
 
-4. Scrivi il piano nel file `<project-root>/.claude/plans/<nome>.md` mantenendo
-   la struttura esistente senza riformattare. Aggiungi solo questo frontmatter in cima:
+4. Write the plan to `<project-root>/.claude/plans/<name>.md`, keeping the
+   existing structure without reformatting. Add only this frontmatter at the top:
 
    ```
    ---
-   date: <data odierna in formato YYYY-MM-DD>
+   date: <today's date in YYYY-MM-DD format>
    status: in-progress
    ---
    ```
 
-5. Conferma all'utente il path completo del file salvato, ad esempio:
-   `Piano salvato in: /path/to/project/.claude/plans/nome-piano.md`
+5. Confirm the full path of the saved file to the user, e.g.:
+   `Plan saved to: /path/to/project/.claude/plans/plan-name.md`
 
-## Note
+## Notes
 
-- Non salvare mai in `~/.claude/` o path globali: il piano appartiene al progetto.
-- Se esiste già un file con lo stesso nome, chiedi all'utente se vuole sovrascriverlo
-  o creare una nuova versione (es. `nome-piano-v2.md`).
-- Se `.claude/plans/` non è già nel `.gitignore` del progetto, chiedi all'utente
-  se vuole aggiungerlo (utile se il piano contiene dettagli interni non da committare).
+- Never save to `~/.claude/` or other global paths: the plan belongs to the project.
+- If a file with the same name already exists, ask the user whether to overwrite it
+  or create a new version (e.g. `plan-name-v2.md`).
+- If `.claude/plans/` isn't already in the project's `.gitignore`, ask the user
+  whether to add it (useful if the plan contains internal details that shouldn't be committed).

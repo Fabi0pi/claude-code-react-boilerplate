@@ -1,47 +1,47 @@
 ---
-description: Segna il piano corrente come completato ed eliminalo da .claude/plans/
+description: Mark the current plan as completed and delete it from .claude/plans/
 ---
 
 # Complete Plan
 
-Segna il piano corrente come completato ed eliminalo da `.claude/plans/`.
+Mark the current plan as completed and delete it from `.claude/plans/`.
 
-## Istruzioni
+## Instructions
 
-1. Trova la root del progetto:
+1. Find the project root:
    ```bash
    git rev-parse --show-toplevel
    ```
 
-2. Elenca i file in `<project-root>/.claude/plans/`.
+2. List the files in `<project-root>/.claude/plans/`.
 
-3. Se non esistono piani, comunica all'utente e fermati.
+3. If no plans exist, tell the user and stop.
 
-4. Se esiste **un solo file**: usalo direttamente.
-   Se esistono **più file**: chiedi quale completare.
+4. If **only one file** exists: use it directly.
+   If **multiple files** exist: ask which one to complete.
 
-5. Prima di eliminare, chiedi conferma esplicita all'utente:
+5. Before deleting, ask the user for explicit confirmation:
    ```
-   Stai per eliminare il piano "<nome-file>.md".
-   Vuoi procedere? (sì / no)
+   You're about to delete the plan "<file-name>.md".
+   Do you want to proceed? (yes / no)
    ```
 
-6. Se confermato:
-   - Elimina il file:
+6. If confirmed:
+   - Delete the file:
      ```bash
-     rm <project-root>/.claude/plans/<nome-file>.md
+     rm <project-root>/.claude/plans/<file-name>.md
      ```
-   - Se la cartella `.claude/plans/` è rimasta vuota, segnalalo
-     (non eliminarla automaticamente).
-   - Conferma con:
+   - If the `.claude/plans/` folder is now empty, mention it
+     (don't delete the folder automatically).
+   - Confirm with:
      ```
-     Piano "<nome-file>" eliminato. Ottimo lavoro! 🎉
+     Plan "<file-name>" deleted. Great work! 🎉
      ```
 
-7. Se l'utente risponde no: annulla senza fare nulla.
+7. If the user says no: cancel without doing anything.
 
-## Nota
+## Note
 
-Se vuoi conservare uno storico invece di eliminare, puoi usare `/archive-plan`
-(da creare) che sposta il file in `.claude/plans/done/` aggiornando lo status
-a `completed`. Chiedilo all'utente se preferisce questa opzione prima di eliminare.
+If you want to keep a history instead of deleting, you can use `/archive-plan`
+(to be created) which moves the file to `.claude/plans/done/` and updates its
+status to `completed`. Ask the user if they'd prefer this option before deleting.
