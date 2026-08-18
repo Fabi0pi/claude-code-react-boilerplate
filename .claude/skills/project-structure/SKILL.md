@@ -1,3 +1,8 @@
+---
+name: project-structure
+description: Use when scaffolding a new project, deciding where a new file or folder should live, or reviewing the overall folder layout of a React + Vite web app.
+---
+
 ## Project Structure - Web
 
 ```

@@ -1,3 +1,10 @@
+---
+name: code-patterns
+description: Use when writing or reviewing component props, callbacks, or mapped list rendering in React. Shows DO/DON'T examples for inline callback length and extracting mapped components.
+---
+
+# Code Patterns
+
 - Avoid passing long inline callbacks as props; when the callback is longer than 4 lines, create a separate function and pass the function
 
 #### DON'T

@@ -1,3 +1,8 @@
+---
+name: dashboard-design
+description: Use when designing or building a dashboard, admin panel, or any data-heavy UI screen. Covers layout hierarchy, data density, tables, feedback states, typography, colors, and anti-patterns to avoid.
+---
+
 # Dashboard Design Principles
 
 ## Core Philosophy

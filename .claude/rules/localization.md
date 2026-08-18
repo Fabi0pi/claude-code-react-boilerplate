@@ -1,10 +1,7 @@
 # Localization (i18next)
 
 - Stack: **i18next** + **react-i18next**
-- **Mai** scrivere testo localizzabile inline nei componenti
-- Tutte le stringhe vivono in:
-  - Web: `public/locales/<lang>/translation.json`
-  - Mobile: `i18n/locales/<lang>/translation.json`
+- Tutte le stringhe vivono in `public/locales/<lang>/translation.json`
 
 ## Uso nei componenti
 

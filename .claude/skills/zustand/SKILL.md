@@ -1,3 +1,8 @@
+---
+name: zustand
+description: Use when adding or reviewing global client state. Covers when to reach for Zustand vs useState vs TanStack Query, store design, location, and selector rules.
+---
+
 # State Management (Zustand)
 
 ## Quando usare cosa

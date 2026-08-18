@@ -1,3 +1,8 @@
+---
+name: tanstack-query
+description: Use when implementing data fetching, server state, queries, or mutations. Covers TanStack Query conventions — query keys, feature/api layout, caching, and mutation patterns.
+---
+
 # TanStack Query Rules
 
 - Use TanStack Query for all server state

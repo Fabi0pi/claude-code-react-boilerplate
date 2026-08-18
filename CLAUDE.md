@@ -49,28 +49,31 @@ Vedi `.claude/rules/` per i dettagli (caricate automaticamente). Le più critich
 
 ## Workflow
 
-- **Debug**: identifica root cause prima, non patchare sintomi (`.claude/rules/debugging.md`)
+- **Debug**: identifica root cause prima, non patchare sintomi. Riproduci l'errore, proponi il fix, verifica.
 - **Refactor**: comportamento invariato, splitta componenti grandi, estrai hook
 - **Plan**: piani complessi vanno salvati con `/save-plan` (slash command)
 - **Form**: nuova form? Segui sempre la skill `/form-validation`
+- **Test**: ogni feature ha test base con esempi input/output; verifica sempre il risultato prima di considerarla fatta
 
 ## Indice file di dettaglio
 
-- `.claude/rules/architecture.md` — separazione logica/UI
-- `.claude/rules/coding-style.md` — stile codice generico
-- `.claude/rules/code-patterns.md` — DON'T/DO con esempi
-- `.claude/rules/react-core.md` — regole React 19
-- `.claude/rules/project-structure.md` — struttura cartelle web
-- `.claude/rules/design.md` — principi dashboard design
-- `.claude/rules/tailwind.md` — uso Tailwind
-- `.claude/rules/theming.md` — token semantici shadcn + dark mode
-- `.claude/rules/forms.md` — React Hook Form + Zod
-- `.claude/rules/tanstack-query.md` — server state
-- `.claude/rules/zustand.md` — client state
-- `.claude/rules/localization.md` — i18next
-- `.claude/rules/debugging.md` — approccio debug
-- `.claude/rules/testing.md` — testing minimo
-- `.claude/skills/components/SKILL.md` — quando creare/splittare componenti
-- `.claude/skills/form-validation/SKILL.md` — pattern Zod completo
+### Rules (`.claude/rules/`) — caricate automaticamente a ogni sessione, tienile piccole
 
-Questi file sotto `.claude/rules/` vengono caricati automaticamente da Claude Code a ogni sessione (non serve leggerli a mano). Le skill vanno invocate quando serve (es. `/form-validation` per una nuova form).
+- `architecture.md` — separazione logica/UI
+- `coding-style.md` — stile codice generico
+- `react-core.md` — regole React 19
+- `tailwind.md` — uso Tailwind
+- `theming.md` — token semantici shadcn + dark mode
+- `localization.md` — i18next
+
+### Skills (`.claude/skills/<nome>/SKILL.md`) — caricate solo quando invocate
+
+- `components` — quando creare/splittare componenti
+- `form-validation` — pattern Zod completo per le form
+- `code-patterns` — esempi DO/DON'T su callback e liste mappate
+- `dashboard-design` — principi di design per dashboard/UI data-heavy
+- `project-structure` — struttura cartelle di riferimento per un nuovo progetto
+- `tanstack-query` — pattern per server state e data fetching
+- `zustand` — pattern per stato globale client-side
+
+Regola generale: se un contenuto serve **sempre**, va in `rules/` (piccolo, a basso costo). Se serve solo in certi task (form, dashboard, data fetching...), va in `skills/` (si carica solo su richiesta). Non duplicare lo stesso contenuto in entrambi i posti.
