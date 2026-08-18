@@ -1,79 +1,79 @@
-# Claude — Istruzioni globali utente
+# Claude — Global User Instructions
 
-## Profilo e preferenze
+## Profile and preferences
 
-- Preferisco soluzioni semplici e veloci da implementare
-- Evita overengineering
-- Quando ha senso, dai una versione "quick & dirty" + una "scalable" con i trade-off
-- Non essere verbose inutilmente — risposte concise, codice prima delle spiegazioni
-- Lingua: rispondi in **italiano** salvo richiesta diversa
+- Prefer simple, quick-to-implement solutions
+- Avoid overengineering
+- When it makes sense, give a "quick & dirty" version + a "scalable" one, with trade-offs
+- Don't be unnecessarily verbose — concise answers, code before explanations
+- Language: respond in **English** unless asked otherwise (edit this to your preferred language — this is a personal setting, not part of the shared boilerplate)
 
-## Stack di default (web)
+## Default stack (web)
 
 - **React 19** + **TypeScript 5.9** + **Vite**
-- **React Router** per navigazione
-- **TanStack Query** per server state
-- **Zustand** per global client state
-- **Tailwind CSS** per styling
-- **shadcn/ui** per componenti UI accessibili e composabili (no Chakra, no styled-components)
-- **design tokens** per colori, typography, spacing, radius, ecc.
-- **React Hook Form** per form state
-- **Zod** per schema validation
-- **i18next** per localizzazione
+- **React Router** for navigation
+- **TanStack Query** for server state
+- **Zustand** for global client state
+- **Tailwind CSS** for styling
+- **shadcn/ui** for accessible, composable UI components (no Chakra, no styled-components)
+- **design tokens** for colors, typography, spacing, radius, etc.
+- **React Hook Form** for form state
+- **Zod** for schema validation
+- **i18next** for localization
 
-## Regole sempre attive
+## Always-active rules
 
-Vedi `.claude/rules/` per i dettagli (caricate automaticamente). Le più critiche:
- 
-- **No `useMemo` / `useCallback` / `React.memo`** — il React Compiler gestisce la memoization
-  > Nota: vale solo se React Compiler è configurato correttamente nel progetto e non crea conflitti con lo state manager o il rendering. Verificare prima di applicare la regola.
-- **Mai `hooks` chiamati condizionalmente** - evitiamo l'errore "React Hook is called conditionally."
-- **Mai `setState` in `useEffect`** per derivare/resettare altro stato → cascading render
-- **Mai `useEffect` per data fetching** → usa TanStack Query
-- **Mai colori raw Tailwind** (`bg-blue-500`) per valori semantici → usa token shadcn (`bg-primary`)
-- **Mai testo inline** nei componenti → usa `t()` di i18next
-- Componenti max ~100 righe, callback inline max 4 righe, mapped components max 6 righe inline
-- I design tokens sono `the source of truth` per i valori visivi. Le utility di Tailwind devono utilizzare i token anziché introdurre colori, spaziatura, tipografia o valori di raggio arbitrari. I componenti shadcn/ui devono essere personalizzati tramite il sistema di token e le varianti dei componenti, non introducendo un secondo sistema di stile.
+See `.claude/rules/` for details (loaded automatically). The most critical ones:
+
+- **No `useMemo` / `useCallback` / `React.memo`** — the React Compiler handles memoization
+  > Note: only applies if the React Compiler is correctly configured in the project and doesn't conflict with the state manager or rendering. Verify before applying this rule.
+- **Never call hooks conditionally** — avoid the "React Hook is called conditionally" error.
+- **Never `setState` in `useEffect`** to derive/reset other state → cascading render
+- **Never `useEffect` for data fetching** → use TanStack Query
+- **Never raw Tailwind colors** (`bg-blue-500`) for semantic values → use shadcn tokens (`bg-primary`)
+- **Never inline text** in components → use i18next's `t()`
+- Components max ~100 lines, inline callbacks max 4 lines, mapped components max 6 lines inline
+- Design tokens are `the source of truth` for visual values. Tailwind utilities must use tokens instead of introducing arbitrary colors, spacing, typography, or radius values. shadcn/ui components must be customized through the token system and component variants, not by introducing a second styling system.
 
 ## Naming conventions
 
-| Tipo | Convenzione | Esempio |
+| Type | Convention | Example |
 |---|---|---|
-| Componenti React | PascalCase | `UserProfileCard.tsx` |
-| Funzioni / variabili | camelCase | `getUserById()` |
-| Costanti | UPPER_SNAKE_CASE | `MAX_RETRY_COUNT` |
-| Tipi / interfacce | PascalCase | `UserProfile` |
-| File non-componente | kebab-case | `auth-utils.ts` |
-| Cartelle | kebab-case | `user-management/` |
-| Variabili d'ambiente | UPPER_SNAKE_CASE | `DATABASE_URL` |
+| React components | PascalCase | `UserProfileCard.tsx` |
+| Functions / variables | camelCase | `getUserById()` |
+| Constants | UPPER_SNAKE_CASE | `MAX_RETRY_COUNT` |
+| Types / interfaces | PascalCase | `UserProfile` |
+| Non-component files | kebab-case | `auth-utils.ts` |
+| Folders | kebab-case | `user-management/` |
+| Environment variables | UPPER_SNAKE_CASE | `DATABASE_URL` |
 
 ## Workflow
 
-- **Debug**: identifica root cause prima, non patchare sintomi. Riproduci l'errore, proponi il fix, verifica.
-- **Refactor**: comportamento invariato, splitta componenti grandi, estrai hook
-- **Plan**: piani complessi vanno salvati con `/save-plan` (slash command)
-- **Form**: nuova form? Segui sempre la skill `/form-validation`
-- **Test**: ogni feature ha test base con esempi input/output; verifica sempre il risultato prima di considerarla fatta
+- **Debug**: identify the root cause first, don't patch symptoms. Reproduce the error, propose the fix, verify it.
+- **Refactor**: behavior unchanged, split large components, extract hooks
+- **Plan**: complex plans get saved with `/save-plan` (slash command)
+- **Form**: building a new form? Always follow the `/form-validation` skill
+- **Test**: every feature has basic tests with input/output examples; always verify the result before considering it done
 
-## Indice file di dettaglio
+## Detail file index
 
-### Rules (`.claude/rules/`) — caricate automaticamente a ogni sessione, tienile piccole
+### Rules (`.claude/rules/`) — loaded automatically every session, keep them small
 
-- `architecture.md` — separazione logica/UI
-- `coding-style.md` — stile codice generico
-- `react-core.md` — regole React 19
-- `tailwind.md` — uso Tailwind
-- `theming.md` — token semantici shadcn + dark mode
+- `architecture.md` — logic/UI separation
+- `coding-style.md` — generic code style
+- `react-core.md` — React 19 rules
+- `tailwind.md` — Tailwind usage
+- `theming.md` — shadcn semantic tokens + dark mode
 - `localization.md` — i18next
 
-### Skills (`.claude/skills/<nome>/SKILL.md`) — caricate solo quando invocate
+### Skills (`.claude/skills/<name>/SKILL.md`) — loaded only when invoked
 
-- `components` — quando creare/splittare componenti
-- `form-validation` — pattern Zod completo per le form
-- `code-patterns` — esempi DO/DON'T su callback e liste mappate
-- `dashboard-design` — principi di design per dashboard/UI data-heavy
-- `project-structure` — struttura cartelle di riferimento per un nuovo progetto
-- `tanstack-query` — pattern per server state e data fetching
-- `zustand` — pattern per stato globale client-side
+- `components` — when to create/split components
+- `form-validation` — full Zod pattern for forms
+- `code-patterns` — DO/DON'T examples for callbacks and mapped lists
+- `dashboard-design` — design principles for dashboards/data-heavy UI
+- `project-structure` — reference folder structure for a new project
+- `tanstack-query` — patterns for server state and data fetching
+- `zustand` — patterns for global client-side state
 
-Regola generale: se un contenuto serve **sempre**, va in `rules/` (piccolo, a basso costo). Se serve solo in certi task (form, dashboard, data fetching...), va in `skills/` (si carica solo su richiesta). Non duplicare lo stesso contenuto in entrambi i posti.
+General rule: if content is needed **always**, it goes in `rules/` (small, low cost). If it's only needed for certain tasks (forms, dashboards, data fetching...), it goes in `skills/` (loaded only on demand). Don't duplicate the same content in both places.
