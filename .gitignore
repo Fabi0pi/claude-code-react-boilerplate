@@ -4,6 +4,6 @@ node_modules/
 .env.*
 !.env.example
 
-# local overrides, non da versionare in un boilerplate
+# local overrides, not meant to be versioned in a boilerplate
 .claude/settings.local.json
 .claude/plans/

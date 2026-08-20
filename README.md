@@ -79,13 +79,6 @@ Always active, injected automatically every session: architecture, coding style,
 - Add new skills as `.claude/skills/<name>/SKILL.md` folders with `name` + `description` frontmatter.
 - `.claude/plans/` (work plans saved by `/save-plan`) is excluded from version control via `.gitignore`: they're per-project, not part of the boilerplate.
 
-## Publishing on GitHub
-
-After creating the remote repo:
-- Check **Settings → Template repository**, so users can "Use this template" instead of forking
-- Add these **Topics** (Settings → gear icon next to "About"): `claude-code`, `boilerplate`, `ai-agents`, `vibe-coding`, `react`, `typescript`, `shadcn-ui`, `agents-md`
-- Set a **social preview image** (Settings → General → Social preview) for nicer link previews when the repo is shared
-
 ## License
 
 MIT — see [LICENSE](LICENSE). Permissive: you can use, copy, modify, and distribute this boilerplate, including in commercial projects, with no obligation to open-source your own code — just keep the copyright notice.
