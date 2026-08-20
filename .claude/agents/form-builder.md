@@ -12,7 +12,7 @@ Follow the pattern defined in the `form-validation` skill strictly.
 
 ## Workflow
 
-1. **Understand the domain**: which entity is this (athlete, lab, auth…)? Does a schema already exist in `src/schemas/<domain>.ts`?
+1. **Understand the domain**: which entity is this (user, auth, profile…)? Does a schema already exist in `src/schemas/<domain>.ts`?
 2. **Schema first**: write/extend the Zod schema in `src/schemas/<domain>.ts`. Never inline in the component.
 3. **Export the type** with `z.infer<>`.
 4. **Form component**:
@@ -38,7 +38,7 @@ Follow the pattern defined in the `form-validation` skill strictly.
 Use `.extend()` for variants of the same domain, never duplicate:
 
 ```ts
-export const AthleteUpdateFormSchema = AthleteCreateFormSchema.extend({
+export const UserUpdateFormSchema = UserCreateFormSchema.extend({
   email: z.string().email('invalid_email').optional(),
 })
 ```

@@ -10,15 +10,15 @@ or `if (!value)` checks as the primary validation strategy.
 
 ## Required structure
 
-### 1. Schema in `apps/frontend/src/schemas/<domain>.ts`
+### 1. Schema in `src/schemas/<domain>.ts`
 
-- File name: logical domain (`auth.ts`, `athlete.ts`, `lab.ts`, …)
+- File name: logical domain (`auth.ts`, `user.ts`, `profile.ts`, …)
 - Schema name: `<Entity><Action>FormSchema`
 - Always export the inferred type:
 
 ```ts
-export const AthleteCreateFormSchema = z.object({ ... })
-export type AthleteCreateFormValues = z.infer<typeof AthleteCreateFormSchema>
+export const UserCreateFormSchema = z.object({ ... })
+export type UserCreateFormValues = z.infer<typeof UserCreateFormSchema>
 ```
 
 ### 2. Error state in the component
@@ -76,22 +76,22 @@ email: z.string().min(1, 'required').email('invalid'),
 If the form does not use i18n, write the error message directly in the schema
 in the appropriate language.
 
-## Existing schemas (reference)
+## Tracking existing schemas
+
+As the project grows, keep a running list of schemas here so the agent can
+reuse/extend them instead of duplicating. Example:
 
 | File | Schema(s) |
 |---|---|
 | `schemas/auth.ts` | `LoginFormSchema` |
-| `schemas/athlete.ts` | `AthleteCreateFormSchema`, `AthleteUpdateFormSchema` |
-| `schemas/lab.ts` | `NewTestFormSchema` |
-| `schemas/goals.ts` | `GoalFormSchema` ✅ primary reference |
-| `schemas/settings.ts` | `GeneralSettingsSchema` ✅ primary reference |
+| `schemas/user.ts` | `UserCreateFormSchema`, `UserUpdateFormSchema` |
 
 ## Extending an existing schema
 
 Use `.extend()` for variants of the same domain instead of duplicating:
 
 ```ts
-export const AthleteUpdateFormSchema = AthleteCreateFormSchema.extend({
+export const UserUpdateFormSchema = UserCreateFormSchema.extend({
   email: z.string().email('Invalid email').optional(),
 })
 ```
