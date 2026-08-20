@@ -52,6 +52,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `tanstack-query` | Data fetching, server state, queries and mutations |
 | `zustand` | Global client-side state |
 | `accessible-components` | Complex interactive widgets — ARIA patterns, focus management, live regions, test checklist |
+| `responsive-design` | Layouts across viewports — breakpoint strategy, per-component adaptations, viewport test checklist |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

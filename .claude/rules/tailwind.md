@@ -25,8 +25,11 @@
 - Use cn() utility for conditional classes
 
 ## Responsiveness
-- Design mobile-first
-- Use responsive utilities (sm, md, lg)
+- Design mobile-first: base styles target mobile, layer complexity at breakpoints (sm, md, lg…)
+- Fluid layouts (flex/grid + gap), never fixed pixel widths on containers
+- No horizontal page scroll at any viewport; wide content scrolls inside its own container
+- Touch targets ≥ 44×44px; never hide functionality behind hover-only interactions
+- For per-component layout patterns (nav, tables, grids, dialogs), follow the `responsive-design` skill
 
 ## Avoid
 - Overly complex class chains

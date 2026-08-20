@@ -39,10 +39,16 @@ so read the relevant files before judging.
    - State conveyed by color alone (no text/icon)
    - Custom widgets (dialog, combobox, tabs, menu) missing the ARIA patterns from the `accessible-components` skill — flag hand-rolled widgets where a shadcn/Radix primitive exists
 
-6. **Naming**
+6. **Responsive**
+   - Fixed pixel widths on containers that break small screens
+   - Multi-column layouts without breakpoint variants (`grid-cols-4` with no mobile step)
+   - Tables/wide content without an `overflow-x-auto` container or mobile pattern
+   - Hover-only interactions with no touch alternative
+
+7. **Naming**
    - Check conventions from `CLAUDE.md`
 
-7. **Localization**
+8. **Localization**
    - Hardcoded strings instead of `t()`
 
 ## Output format
