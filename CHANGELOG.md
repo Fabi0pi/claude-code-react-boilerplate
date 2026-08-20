@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `ui-builder` agent workflow now includes accessibility and responsive steps, pointing to the rules and skills
 - `rules/tailwind.md` — strengthened the Responsiveness baseline (fluid layouts, no horizontal page scroll, touch targets)
 
+### Fixed
+- `skills/project-structure` — aligned the reference tree with the declared stack: `tsconfig.json`/`vite.config.ts` instead of `jsconfig.json`/`vite.config.js`, `store/index.ts` instead of `.js`, removed a leftover Chakra `extendTheme` comment, and applied the boilerplate's own naming conventions throughout — all component files PascalCase (`Page1.tsx`, `NotFoundPage.tsx`, `RouterProvider.tsx`, `Button.tsx`, `AppShell.tsx`, `App.tsx`…), non-component files kebab-case (`semantic-tokens.ts`, `raw-colors.ts`)
+- `skills/code-patterns` — typo ("retun" → "return")
+
 ---
 
 Initial state of the boilerplate: `.claude/` structure (rules, skills, agents, commands, hooks, settings), `CLAUDE.md`, `AGENTS.md`, `README.md`, `LICENSE` (MIT).

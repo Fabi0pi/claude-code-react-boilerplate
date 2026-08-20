@@ -35,7 +35,7 @@ return <MyComponent onPress={handleOnPress} />
 ```
 
 - Create the smaller primitive UI components first (buttons, inputs, selects, checkboxes, cards, and so on), then reuse them in larger and more specialized components
-- When mapping items to retun a component, create a separate component and do not inline it when it is longer than 6 lines
+- When mapping items to return a component, create a separate component and do not inline it when it is longer than 6 lines
 
 #### DON'T
 ```tsx

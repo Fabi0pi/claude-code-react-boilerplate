@@ -12,45 +12,45 @@ my-react-app/
 ├─ src/
 │  ├─ app/
 │  │  ├─ providers/
-│  │  │  ├─ router-provider.tsx
-│  │  │  ├─ query-provider.tsx
-│  │  │  └─ theme-provider.tsx
+│  │  │  ├─ RouterProvider.tsx
+│  │  │  ├─ QueryProvider.tsx
+│  │  │  └─ ThemeProvider.tsx
 │  │  ├─ router/
 │  │  │  └─ index.tsx
 │  │  └─ store/
-│  │     └─ index.js
+│  │     └─ index.ts
 │  │
 │  ├─ pages/
 │  │  ├─ page1/
-│  │  │  ├─ page1.tsx
-│  │  │  ├─ page1-detail.tsx
+│  │  │  ├─ Page1.tsx
+│  │  │  ├─ Page1Detail.tsx
 │  │  │  ├─ types/                              # only if necessary
 │  │  │  ├─ hooks/                              # only if necessary
 │  │  │  └─ components/                         # only if necessary
-│  │  │     └─ customPageComponent.tsx
+│  │  │     └─ CustomPageComponent.tsx
 │  │  └─ not-found/
-│  │     └─ not-found-page.tsx
+│  │     └─ NotFoundPage.tsx
 │  │
 │  ├─ features/
-│  |   ├── feature_1/
-│  |   │   ├── api                               # API layer with backend calls
-│  |   │   ├── store                             # store (only if necessary)
-│  |   │   ├── components                        # Feature 1 specific components (only ifnecessary)
-│  |   │   └── pages                             # Feature 1 pages for React Router
+│  │   ├── feature-1/
+│  │   │   ├── api                               # API layer with backend calls
+│  │   │   ├── store                             # store (only if necessary)
+│  │   │   ├── components                        # feature-specific components (only if necessary)
+│  │   │   └── pages                             # feature pages for React Router
 │  │
 │  ├─ components/
 │  │  ├─ ui/                                     # Generic reusable components configurable with props
 │  │  │  ├─ button/
-|  |  |  |  ├─ types/                            # only if necessary
-|  |  |  |  ├─ config/                           # only if necessary
-|  |  |  |  └─ button.tsx
+│  │  │  │  ├─ types/                            # only if necessary
+│  │  │  │  ├─ config/                           # only if necessary
+│  │  │  │  └─ Button.tsx
 │  │  │  ├─ input/
 │  │  │  ├─ modal/
 │  │  │  └─ spinner/
 │  │  └─ layout/
-│  │     ├─ app-shell.tsx
-│  │     ├─ header.tsx
-│  │     └─ sidebar.tsx
+│  │     ├─ AppShell.tsx
+│  │     ├─ Header.tsx
+│  │     └─ Sidebar.tsx
 │  │
 │  ├─ services/
 │  │  ├─ http.ts
@@ -75,21 +75,21 @@ my-react-app/
 │  │  └─ app-routes.ts
 │  │
 │  ├─ theme/
-│  │  ├─ index.ts                                  # extendTheme
-│  │  ├─ semanticTokens.ts                   
-│  │  ├─ components.ts                  
-│  │  └─ rawColors.ts
+│  │  ├─ index.ts                                  # theme entry point
+│  │  ├─ semantic-tokens.ts
+│  │  ├─ components.ts
+│  │  └─ raw-colors.ts
 │  │
 │  ├─ assets/
 │  │  └─ images/
 │  │
-│  ├─ main.tsx
-│  ├─ app.tsx                                      # Entry point
+│  ├─ main.tsx                                     # Entry point
+│  ├─ App.tsx                                      # Root component
 │  └─ index.css
 ├─ .env
 ├─ .env.example
-├─ jsconfig.json
+├─ tsconfig.json
 ├─ package.json
-├─ vite.config.js
+├─ vite.config.ts
 └─ README.md
 ```
