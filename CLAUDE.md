@@ -65,6 +65,7 @@ See `.claude/rules/` for details (loaded automatically). The most critical ones:
 - `tailwind.md` — Tailwind usage
 - `theming.md` — shadcn semantic tokens + dark mode
 - `localization.md` — i18next
+- `accessibility.md` — semantic HTML, labels, focus, keyboard baseline
 
 ### Skills (`.claude/skills/<name>/SKILL.md`) — loaded only when invoked
 
@@ -75,5 +76,6 @@ See `.claude/rules/` for details (loaded automatically). The most critical ones:
 - `project-structure` — reference folder structure for a new project
 - `tanstack-query` — patterns for server state and data fetching
 - `zustand` — patterns for global client-side state
+- `accessible-components` — ARIA patterns for complex widgets (dialogs, comboboxes, tabs, menus)
 
 General rule: if content is needed **always**, it goes in `rules/` (small, low cost). If it's only needed for certain tasks (forms, dashboards, data fetching...), it goes in `skills/` (loaded only on demand). Don't duplicate the same content in both places.

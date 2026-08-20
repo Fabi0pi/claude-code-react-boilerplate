@@ -39,7 +39,7 @@ That's why, in this repo:
 Don't duplicate the same content in both places: if you're adding a rule, first ask whether it's needed *always* or only for certain tasks.
 
 ### Rules (`.claude/rules/`)
-Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization.
+Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization, accessibility baseline.
 
 ### Skills (`.claude/skills/`)
 | Skill | When it triggers |
@@ -51,6 +51,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `project-structure` | Scaffolding a new project or deciding where a file belongs |
 | `tanstack-query` | Data fetching, server state, queries and mutations |
 | `zustand` | Global client-side state |
+| `accessible-components` | Complex interactive widgets — ARIA patterns, focus management, live regions, test checklist |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

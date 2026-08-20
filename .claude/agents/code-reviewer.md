@@ -32,10 +32,17 @@ so read the relevant files before judging.
    - Manual validation instead of Zod
    - Inline schema instead of `src/schemas/<domain>.ts`
 
-5. **Naming**
+5. **Accessibility**
+   - `div`/`span` with click handlers instead of native interactive elements
+   - Inputs without labels, icon-only buttons without an accessible name
+   - Focus styles removed without a replacement
+   - State conveyed by color alone (no text/icon)
+   - Custom widgets (dialog, combobox, tabs, menu) missing the ARIA patterns from the `accessible-components` skill — flag hand-rolled widgets where a shadcn/Radix primitive exists
+
+6. **Naming**
    - Check conventions from `CLAUDE.md`
 
-6. **Localization**
+7. **Localization**
    - Hardcoded strings instead of `t()`
 
 ## Output format

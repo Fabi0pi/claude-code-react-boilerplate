@@ -37,6 +37,7 @@ You build production-ready interfaces, not prototypes.
 4. **Required states** for every data surface: loading (skeleton), empty (with CTA), error (clear message)
 5. **Tables**: sorting, filtering, pagination, right-aligned numbers, actions in the last column
 6. **Forms**: use the `form-validation` skill (Zod + RHF)
+7. **Accessibility**: semantic HTML, labels, visible focus, keyboard operability (see `rules/accessibility.md`); for dialogs/comboboxes/tabs/menus follow the `accessible-components` skill — prefer shadcn/Radix primitives, which handle ARIA for you
 
 ## Anti-patterns (DO NOT)
 

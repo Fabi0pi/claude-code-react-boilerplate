@@ -7,4 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Initial state of the boilerplate: `.claude/` structure (rules, skills, agents, commands, hooks, settings), `CLAUDE.md`, `AGENTS.md`, `README.md`, `LICENSE` (MIT). Future changes will be tracked here.
+### Added
+- `rules/accessibility.md` — always-on accessibility baseline (semantic HTML, labels, visible focus, keyboard operability, color-independent state)
+- `skills/accessible-components` — on-demand ARIA patterns for complex widgets (dialogs, comboboxes, tabs, menus, live regions) with a keyboard/screen-reader test checklist
+
+### Changed
+- `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets)
+- `ui-builder` agent workflow now includes accessibility, pointing to the rule and skill
+
+---
+
+Initial state of the boilerplate: `.claude/` structure (rules, skills, agents, commands, hooks, settings), `CLAUDE.md`, `AGENTS.md`, `README.md`, `LICENSE` (MIT).
