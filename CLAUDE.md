@@ -66,6 +66,7 @@ See `.claude/rules/` for details (loaded automatically). The most critical ones:
 - `theming.md` — shadcn semantic tokens + dark mode
 - `localization.md` — i18next
 - `accessibility.md` — semantic HTML, labels, focus, keyboard baseline
+- `security.md` — frontend security baseline (secrets, XSS, boundary validation)
 
 ### Skills (`.claude/skills/<name>/SKILL.md`) — loaded only when invoked
 

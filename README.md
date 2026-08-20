@@ -39,7 +39,7 @@ That's why, in this repo:
 Don't duplicate the same content in both places: if you're adding a rule, first ask whether it's needed *always* or only for certain tasks.
 
 ### Rules (`.claude/rules/`)
-Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization, accessibility baseline.
+Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization, accessibility baseline, frontend security baseline.
 
 ### Skills (`.claude/skills/`)
 | Skill | When it triggers |

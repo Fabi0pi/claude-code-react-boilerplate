@@ -45,10 +45,17 @@ so read the relevant files before judging.
    - Tables/wide content without an `overflow-x-auto` container or mobile pattern
    - Hover-only interactions with no touch alternative
 
-7. **Naming**
+7. **Security**
+   - Secrets or API keys in client code (any sensitive value in `VITE_*` vars — they're public in the bundle)
+   - `dangerouslySetInnerHTML` with unsanitized user/remote content
+   - External data (API responses, URL params, storage reads) used without Zod validation
+   - Tokens stored in `localStorage`; `target="_blank"` without `rel="noopener noreferrer"`
+   - Redirects or `href` built from unvalidated user input
+
+8. **Naming**
    - Check conventions from `CLAUDE.md`
 
-8. **Localization**
+9. **Localization**
    - Hardcoded strings instead of `t()`
 
 ## Output format
