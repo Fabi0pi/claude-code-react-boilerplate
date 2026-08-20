@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)
 - `ui-builder` agent workflow now includes accessibility and responsive steps, pointing to the rules and skills
 - `rules/tailwind.md` — strengthened the Responsiveness baseline (fluid layouts, no horizontal page scroll, touch targets)
+- README's Customization section now documents the file-based enable/disable model: to exclude a rule/skill/agent/command, delete its file (and its line in `CLAUDE.md`'s index) — there is no toggle mechanism in `settings.json`
 
 ### Fixed
 - `skills/project-structure` — aligned the reference tree with the declared stack: `tsconfig.json`/`vite.config.ts` instead of `jsconfig.json`/`vite.config.js`, `store/index.ts` instead of `.js`, removed a leftover Chakra `extendTheme` comment, and applied the boilerplate's own naming conventions throughout — all component files PascalCase (`Page1.tsx`, `NotFoundPage.tsx`, `RouterProvider.tsx`, `Button.tsx`, `AppShell.tsx`, `App.tsx`…), non-component files kebab-case (`semantic-tokens.ts`, `raw-colors.ts`)

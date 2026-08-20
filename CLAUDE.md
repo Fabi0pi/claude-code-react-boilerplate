@@ -81,3 +81,5 @@ See `.claude/rules/` for details (loaded automatically). The most critical ones:
 - `responsive-design` — breakpoint strategy and per-component layout adaptations
 
 General rule: if content is needed **always**, it goes in `rules/` (small, low cost). If it's only needed for certain tasks (forms, dashboards, data fetching...), it goes in `skills/` (loaded only on demand). Don't duplicate the same content in both places.
+
+To disable a rule or skill, delete its file and remove its line from this index — loading is file-based, there is no toggle in `settings.json`.

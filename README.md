@@ -76,9 +76,19 @@ Always active, injected automatically every session: architecture, coding style,
 
 ## Customization
 
+Everything here is a standalone file — configuration is file-based, there's no enable/disable mechanism in `settings.json`.
+
+**Adding:**
 - Change the default response language in `CLAUDE.md` → `Profile and preferences`.
 - Add new rules as files in `.claude/rules/` and reference them in `CLAUDE.md`'s index.
 - Add new skills as `.claude/skills/<name>/SKILL.md` folders with `name` + `description` frontmatter.
+
+**Removing:**
+- Don't want a rule, skill, agent, or command? **Delete its file** (or don't copy it into your project) — that's the whole mechanism. Claude Code loads whatever exists in the folders, nothing else.
+- When you remove a file, also remove its line from `CLAUDE.md`'s index and any cross-references (e.g. `rules/tailwind.md` points to the `responsive-design` skill, `rules/accessibility.md` points to `accessible-components`, the `code-reviewer` and `ui-builder` agents reference both). Dangling references don't break anything — the agent just won't find the file — but keeping them clean avoids confusion.
+- Everything is versioned, so a deletion is always reversible via git.
+
+**Other:**
 - `.claude/plans/` (work plans saved by `/save-plan`) is excluded from version control via `.gitignore`: they're per-project, not part of the boilerplate.
 
 ## License
