@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `skills/performance` — on-demand guidance on route-based code splitting, list virtualization, image/asset loading, and when optimization is (not) worth it
 - `skills/error-handling` — on-demand Error Boundary granularity, sync-vs-async error handling, and fallback UI patterns
 - `rules/architecture.md` — module boundaries bullet: features don't import from other features, pages import features (not the other way around)
+- `skills/testing-architecture` — on-demand testing strategy: MSW for network-boundary mocking, unit/integration/e2e boundaries, Testing Library query priority, test data builders, testing hooks/stores/async state, coverage philosophy
 
 ### Changed
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)
@@ -27,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - `skills/project-structure` — aligned the reference tree with the declared stack: `tsconfig.json`/`vite.config.ts` instead of `jsconfig.json`/`vite.config.js`, `store/index.ts` instead of `.js`, removed a leftover Chakra `extendTheme` comment, and applied the boilerplate's own naming conventions throughout — all component files PascalCase (`Page1.tsx`, `NotFoundPage.tsx`, `RouterProvider.tsx`, `Button.tsx`, `AppShell.tsx`, `App.tsx`…), non-component files kebab-case (`semantic-tokens.ts`, `raw-colors.ts`)
 - `skills/code-patterns` — typo ("retun" → "return")
+- `commands/write-tests.md` — frontmatter `description` was still in Italian, missed in the earlier translation pass
 
 ---
 

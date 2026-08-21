@@ -56,6 +56,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `visual-craft` | Visual polish — typography scale, spacing rhythm, alignment, motion, hover/active/focus/disabled/loading states |
 | `performance` | Route-based code splitting, list virtualization, image/asset loading, when optimization is (not) worth it |
 | `error-handling` | Error Boundary granularity, sync vs async errors, fallback UI patterns |
+| `testing-architecture` | What to mock (MSW), test boundaries, Testing Library query priority, test data builders |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

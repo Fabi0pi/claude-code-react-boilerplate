@@ -1,8 +1,10 @@
 ---
-description: Genera test (unit + integration) per il codice indicato, seguendo la testing pyramid del progetto
+description: Generate tests (unit + integration) for the given code, following the project's testing pyramid
 ---
 
 Write tests for: $ARGUMENTS following the project testing guidelines.
+For mocking strategy, test data, and where a test belongs (unit vs
+integration vs e2e), follow the `testing-architecture` skill.
 
 Testing strategy:
 - Use a testing pyramid approach:
