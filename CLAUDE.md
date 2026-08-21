@@ -10,7 +10,7 @@
 
 ## Default stack (web)
 
-- **React 19** + **TypeScript 5.9** + **Vite**
+- **React 19** + **TypeScript 7** + **Vite**
 - **React Router** for navigation
 - **TanStack Query** for server state
 - **Zustand** for global client state

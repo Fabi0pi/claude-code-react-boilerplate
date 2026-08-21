@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Bumped the declared TypeScript version from 5.9 to 7 (CLAUDE.md, README, AGENTS.md, rules/react-core.md) — TypeScript 7.0 is now current, shipping the Go-native compiler. Only the major version is pinned going forward, matching how every other tool in the stack line is expressed, so this doesn't need updating on every minor release.
+
 ### Added
 - `rules/accessibility.md` — always-on accessibility baseline (semantic HTML, labels, visible focus, keyboard operability, color-independent state)
 - `skills/accessible-components` — on-demand ARIA patterns for complex widgets (dialogs, comboboxes, tabs, menus, live regions) with a keyboard/screen-reader test checklist

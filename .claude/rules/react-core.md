@@ -1,6 +1,6 @@
 # React Core Rules
 
-- Use React 19 with TypeScript 5.9 and Vite
+- Use React 19 with TypeScript 7 and Vite
 - Use React Router for navigation
 - Use TanStack Query for data fetching
 - Prefer functional components

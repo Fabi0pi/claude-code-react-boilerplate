@@ -22,7 +22,7 @@ None of these folders work if renamed or moved: Claude Code looks for exactly `.
 
 ## Reference stack
 
-React 19 · TypeScript 5.9 · Vite · React Router · TanStack Query · Zustand · Tailwind CSS · shadcn/ui · React Hook Form · Zod · i18next.
+React 19 · TypeScript 7 · Vite · React Router · TanStack Query · Zustand · Tailwind CSS · shadcn/ui · React Hook Form · Zod · i18next.
 
 The rules in `.claude/rules/` assume this stack. If your project is different, adapt the files before using them (`theming.md` and `tailwind.md` in particular are specific to this combination).
 

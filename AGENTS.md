@@ -4,7 +4,7 @@ This repository is a **configuration boilerplate** for developing with AI agents
 
 ## Default stack
 
-React 19 · TypeScript 5.9 · Vite · React Router · TanStack Query (server state) · Zustand (global client state) · Tailwind CSS · shadcn/ui · React Hook Form + Zod · i18next.
+React 19 · TypeScript 7 · Vite · React Router · TanStack Query (server state) · Zustand (global client state) · Tailwind CSS · shadcn/ui · React Hook Form + Zod · i18next.
 
 ## Critical rules
 
