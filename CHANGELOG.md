@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Bumped the declared TypeScript version from 5.9 to 7 (CLAUDE.md, README, AGENTS.md, rules/react-core.md) — TypeScript 7.0 is now current, shipping the Go-native compiler. Only the major version is pinned going forward, matching how every other tool in the stack line is expressed, so this doesn't need updating on every minor release.
+- `rules/typescript.md`'s strict-mode bullet updated: TypeScript 7 defaults `strict: true` when unset, so the rule no longer assumes manual opt-in (the rest of the rule — no `any`, discriminated unions, type-only imports, utility types — is compiler-version-independent and unaffected)
 
 ### Added
 - `rules/accessibility.md` — always-on accessibility baseline (semantic HTML, labels, visible focus, keyboard operability, color-independent state)
