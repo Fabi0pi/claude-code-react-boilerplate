@@ -18,8 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `skills/error-handling` — on-demand Error Boundary granularity, sync-vs-async error handling, and fallback UI patterns
 - `rules/architecture.md` — module boundaries bullet: features don't import from other features, pages import features (not the other way around)
 - `skills/testing-architecture` — on-demand testing strategy: MSW for network-boundary mocking, unit/integration/e2e boundaries, Testing Library query priority, test data builders, testing hooks/stores/async state, coverage philosophy
+- `skills/http-client` — on-demand HTTP/API layer: single fetch wrapper, auth header handling and 401 flow, normalized `ApiError` shape (the `getErrorMessage` helper `error-handling` already referenced), typed responses via Zod, and an explicit division of responsibility with TanStack Query's retry/caching
 
 ### Changed
+- `skills/error-handling` and `skills/tanstack-query` now cross-reference `http-client` instead of pointing at an undefined API layer
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)
 - `ui-builder` agent workflow now includes accessibility, responsive, and visual-craft polish steps, pointing to the rules and skills
 - `rules/tailwind.md` — strengthened the Responsiveness baseline (fluid layouts, no horizontal page scroll, touch targets)

@@ -57,6 +57,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `performance` | Route-based code splitting, list virtualization, image/asset loading, when optimization is (not) worth it |
 | `error-handling` | Error Boundary granularity, sync vs async errors, fallback UI patterns |
 | `testing-architecture` | What to mock (MSW), test boundaries, Testing Library query priority, test data builders |
+| `http-client` | Shared fetch wrapper, auth headers, error normalization, typed responses, retries vs TanStack Query |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

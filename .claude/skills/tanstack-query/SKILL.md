@@ -23,7 +23,7 @@ description: Use when implementing data fetching, server state, queries, or muta
 - Tune staleTime only when necessary
 
 ## Structure
-- API calls → features/<feature>/api
+- API calls → features/<feature>/api, built on the shared client from the `http-client` skill
 - Hooks → features/<feature>/hooks
 
 ## Example Pattern

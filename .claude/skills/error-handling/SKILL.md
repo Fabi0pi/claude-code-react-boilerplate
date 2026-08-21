@@ -33,7 +33,7 @@ if (isError) return <ErrorState message={getErrorMessage(error)} onRetry={refetc
 return <Content data={data} />
 ```
 
-- Normalize errors at the API layer (one `getErrorMessage(error)` helper) instead of branching on error shape in every component
+- Normalize errors at the API layer (one `getErrorMessage(error)` helper, defined in the `http-client` skill) instead of branching on error shape in every component
 - Distinguish user-actionable errors (validation, permission) from unexpected ones (500, network) — the former get a specific message, the latter a generic one plus logging
 
 ## Anti-patterns (DO NOT)
