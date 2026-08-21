@@ -20,10 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `skills/testing-architecture` — on-demand testing strategy: MSW for network-boundary mocking, unit/integration/e2e boundaries, Testing Library query priority, test data builders, testing hooks/stores/async state, coverage philosophy
 - `skills/http-client` — on-demand HTTP/API layer: single fetch wrapper, auth header handling and 401 flow, normalized `ApiError` shape (the `getErrorMessage` helper `error-handling` already referenced), typed responses via Zod, and an explicit division of responsibility with TanStack Query's retry/caching
 - `skills/design-tokens` — on-demand design token system beyond color: the three-tier `raw-colors.ts` → `semantic-tokens.ts` → `components.ts` model, with CSS/Tailwind as the source of truth and the TS files as re-exports for what className can't reach, applied to spacing, typography, radius, and elevation
+- `skills/i18n-advanced` — on-demand pluralization (CLDR plural forms), locale-aware date/number/currency formatting, namespace splitting with lazy-loading (paired with `performance`'s route-based splitting), `<Trans>` for rich text instead of `dangerouslySetInnerHTML`, RTL support, locale detection, and missing-key fallback strategy
 
 ### Changed
 - `skills/error-handling` and `skills/tanstack-query` now cross-reference `http-client` instead of pointing at an undefined API layer
 - `skills/project-structure` — `theme/` folder now points to `design-tokens` for what belongs in each file
+- `rules/localization.md` now points to `i18n-advanced` for anything beyond basic `t()` usage and key conventions
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)
 - `ui-builder` agent workflow now includes accessibility, responsive, and visual-craft polish steps, pointing to the rules and skills
 - `rules/tailwind.md` — strengthened the Responsiveness baseline (fluid layouts, no horizontal page scroll, touch targets)

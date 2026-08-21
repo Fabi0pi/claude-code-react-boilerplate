@@ -17,3 +17,5 @@ return <Button>{t('save')}</Button>
 - `snake_case` or `camelCase`, pick one and stick to it
 - Group by domain: `auth.login`, `forms.errors.required`
 - Short, reusable keys beat long, hyper-specific ones
+
+For pluralization, date/number formatting, namespaces, RTL, or lazy-loading translations, follow the `i18n-advanced` skill.
