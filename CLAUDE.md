@@ -85,6 +85,7 @@ See `.claude/rules/` for details (loaded automatically). The most critical ones:
 - `error-handling` — Error Boundary granularity, sync vs async errors, fallback UI
 - `testing-architecture` — what to mock, test boundaries, test data, query priority
 - `http-client` — shared fetch wrapper, auth headers, error normalization, typed responses
+- `design-tokens` — typography, spacing, radius, and elevation tokens beyond color
 
 General rule: if content is needed **always**, it goes in `rules/` (small, low cost). If it's only needed for certain tasks (forms, dashboards, data fetching...), it goes in `skills/` (loaded only on demand). Don't duplicate the same content in both places.
 

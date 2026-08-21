@@ -58,6 +58,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `error-handling` | Error Boundary granularity, sync vs async errors, fallback UI patterns |
 | `testing-architecture` | What to mock (MSW), test boundaries, Testing Library query priority, test data builders |
 | `http-client` | Shared fetch wrapper, auth headers, error normalization, typed responses, retries vs TanStack Query |
+| `design-tokens` | Typography, spacing, radius, and elevation tokens beyond color — the three-tier `theme/` model |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

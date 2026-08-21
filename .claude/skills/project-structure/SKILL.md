@@ -74,7 +74,7 @@ my-react-app/
 │  ├─ constants/
 │  │  └─ app-routes.ts
 │  │
-│  ├─ theme/
+│  ├─ theme/                                       # see `design-tokens` skill for what goes in each file
 │  │  ├─ index.ts                                  # theme entry point
 │  │  ├─ semantic-tokens.ts
 │  │  ├─ components.ts
