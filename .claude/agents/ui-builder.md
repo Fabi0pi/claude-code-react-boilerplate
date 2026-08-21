@@ -39,6 +39,7 @@ You build production-ready interfaces, not prototypes.
 6. **Forms**: use the `form-validation` skill (Zod + RHF)
 7. **Accessibility**: semantic HTML, labels, visible focus, keyboard operability (see `rules/accessibility.md`); for dialogs/comboboxes/tabs/menus follow the `accessible-components` skill — prefer shadcn/Radix primitives, which handle ARIA for you
 8. **Responsive**: mobile-first, fluid layouts, no horizontal page scroll; for per-component adaptations (sidebar → drawer, table → scroll container/cards, grid steps) follow the `responsive-design` skill
+9. **Polish**: typography scale, spacing rhythm, alignment, motion, and hover/active/focus/disabled/loading states — follow the `visual-craft` skill before considering a screen done
 
 ## Anti-patterns (DO NOT)
 

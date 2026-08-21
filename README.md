@@ -53,6 +53,7 @@ Always active, injected automatically every session: architecture, coding style,
 | `zustand` | Global client-side state |
 | `accessible-components` | Complex interactive widgets — ARIA patterns, focus management, live regions, test checklist |
 | `responsive-design` | Layouts across viewports — breakpoint strategy, per-component adaptations, viewport test checklist |
+| `visual-craft` | Visual polish — typography scale, spacing rhythm, alignment, motion, hover/active/focus/disabled/loading states |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |

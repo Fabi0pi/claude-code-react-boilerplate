@@ -12,10 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `skills/accessible-components` — on-demand ARIA patterns for complex widgets (dialogs, comboboxes, tabs, menus, live regions) with a keyboard/screen-reader test checklist
 - `skills/responsive-design` — on-demand breakpoint strategy, fluid layout patterns, per-component adaptations (nav, tables, grids, dialogs), and a viewport test checklist
 - `rules/security.md` — always-on frontend security baseline (no secrets in the client bundle, XSS/`dangerouslySetInnerHTML`, Zod validation at boundaries, token storage, safe links and redirects)
+- `skills/visual-craft` — on-demand visual polish guidance: typography scale, spacing rhythm, alignment, color contrast for hierarchy, motion (durations/easing), and micro-interaction states (hover/active/focus/disabled/loading)
 
 ### Changed
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)
-- `ui-builder` agent workflow now includes accessibility and responsive steps, pointing to the rules and skills
+- `ui-builder` agent workflow now includes accessibility, responsive, and visual-craft polish steps, pointing to the rules and skills
 - `rules/tailwind.md` — strengthened the Responsiveness baseline (fluid layouts, no horizontal page scroll, touch targets)
 - README's Customization section now documents the file-based enable/disable model: to exclude a rule/skill/agent/command, delete its file (and its line in `CLAUDE.md`'s index) — there is no toggle mechanism in `settings.json`
 
