@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `skills/responsive-design` — on-demand breakpoint strategy, fluid layout patterns, per-component adaptations (nav, tables, grids, dialogs), and a viewport test checklist
 - `rules/security.md` — always-on frontend security baseline (no secrets in the client bundle, XSS/`dangerouslySetInnerHTML`, Zod validation at boundaries, token storage, safe links and redirects)
 - `skills/visual-craft` — on-demand visual polish guidance: typography scale, spacing rhythm, alignment, color contrast for hierarchy, motion (durations/easing), and micro-interaction states (hover/active/focus/disabled/loading)
+- `rules/typescript.md` — always-on TypeScript conventions (strict mode, no `any`, discriminated unions for variant state, type-only imports, utility types over hand-duplicated shapes)
+- `skills/performance` — on-demand guidance on route-based code splitting, list virtualization, image/asset loading, and when optimization is (not) worth it
+- `skills/error-handling` — on-demand Error Boundary granularity, sync-vs-async error handling, and fallback UI patterns
+- `rules/architecture.md` — module boundaries bullet: features don't import from other features, pages import features (not the other way around)
 
 ### Changed
 - `code-reviewer` agent now checks accessibility (missing labels, div-as-button, removed focus styles, color-only state, missing ARIA on custom widgets), responsive issues (fixed widths, missing breakpoint variants, tables without scroll containers, hover-only interactions), and security issues (secrets in client code, unsanitized HTML injection, unvalidated external data, unsafe token storage and links)

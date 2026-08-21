@@ -39,7 +39,7 @@ That's why, in this repo:
 Don't duplicate the same content in both places: if you're adding a rule, first ask whether it's needed *always* or only for certain tasks.
 
 ### Rules (`.claude/rules/`)
-Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization, accessibility baseline, frontend security baseline.
+Always active, injected automatically every session: architecture, coding style, React 19, Tailwind, semantic theming tokens, localization, accessibility baseline, frontend security baseline, TypeScript conventions.
 
 ### Skills (`.claude/skills/`)
 | Skill | When it triggers |
@@ -54,6 +54,8 @@ Always active, injected automatically every session: architecture, coding style,
 | `accessible-components` | Complex interactive widgets — ARIA patterns, focus management, live regions, test checklist |
 | `responsive-design` | Layouts across viewports — breakpoint strategy, per-component adaptations, viewport test checklist |
 | `visual-craft` | Visual polish — typography scale, spacing rhythm, alignment, motion, hover/active/focus/disabled/loading states |
+| `performance` | Route-based code splitting, list virtualization, image/asset loading, when optimization is (not) worth it |
+| `error-handling` | Error Boundary granularity, sync vs async errors, fallback UI patterns |
 
 ### Agents (`.claude/agents/`)
 | Agent | Use |
